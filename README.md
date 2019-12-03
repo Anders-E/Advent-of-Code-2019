@@ -29,6 +29,6 @@ All code found in this repository is licensed under the GNU General Public Licen
 |6|||
 |5|||
 |4|||
-|3|⭐||
+|3|⭐|⭐|
 |2|⭐|⭐|
 |1|⭐|⭐|
