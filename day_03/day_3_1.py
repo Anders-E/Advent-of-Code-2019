@@ -1,5 +1,4 @@
 from sys import stdin
-from collections import defaultdict
 
 dirs = {"U": (0, 1), "R": (1, 0), "D": (0, -1), "L": (-1, 0)}
 
