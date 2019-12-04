@@ -2,7 +2,7 @@ main = print . length . filter twoAdjacentsSame . filter neverDecrease $ map int
 
 twoAdjacentsSame xs = elem True (zipWith (==) xs $ tail xs)
 
-neverDecrease xs = not $ elem False $ zipWith (<=) xs (tail xs)
+neverDecrease xs = notElem False $ zipWith (<=) xs (tail xs)
 
 intToList x = intToList' x []
 intToList' 0 xs = xs
