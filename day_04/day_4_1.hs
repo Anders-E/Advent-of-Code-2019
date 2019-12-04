@@ -1,14 +1,8 @@
-main = print $ length $ filter twoAdjacentsSame $ filter neverDecrease $ map intToList [254032..789860]
+main = print . length . filter twoAdjacentsSame . filter neverDecrease $ map intToList [254032..789860]
 
-twoAdjacentsSame [_] = False
-twoAdjacentsSame (x:y:xs)
-    | x == y = True
-    | otherwise = twoAdjacentsSame (y:xs)
+twoAdjacentsSame xs = not . null $ zipWith (==) xs (tail xs)
 
-neverDecrease [_] = True
-neverDecrease (x:y:xs)
-    | x > y = False
-    | otherwise = neverDecrease (y:xs)
+neverDecrease xs = null $  zipWith (>) xs (tail xs)
 
 intToList x = intToList' x []
 intToList' 0 xs = xs
