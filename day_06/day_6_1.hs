@@ -1,7 +1,7 @@
 import qualified Data.Map.Strict as Map
 import Data.List.Split
 
-main = interact ((++ "\n") . show . orbits . orbitMap . map (splitOn ")") . lines )
+main = interact (show . orbits . orbitMap . map (splitOn ")") . lines )
 
 orbitMap xs = orbitMap' xs Map.empty
 orbitMap' [] m = m
