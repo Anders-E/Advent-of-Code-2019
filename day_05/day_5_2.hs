@@ -52,6 +52,40 @@ execInstruction prog (Opcode 4 a b c) i =
   where
     x = param (immediate a) (prog ! (i + 1)) prog
 
+-- jump-if-true
+execInstruction prog (Opcode 5 a b c) i
+    | x /= 0 = return (prog, y)
+    | otherwise = return (prog, i + 3)
+  where
+    x = param (immediate a) (prog ! (i + 1)) prog
+    y = param (immediate b) (prog ! (i + 2)) prog
+
+-- jump-if-false
+execInstruction prog (Opcode 6 a b c) i
+    | x == 0 = return (prog, y)
+    | otherwise = return (prog, i + 3)
+  where
+    x = param (immediate a) (prog ! (i + 1)) prog
+    y = param (immediate b) (prog ! (i + 2)) prog
+
+-- less than
+execInstruction prog (Opcode 7 a b c) i
+    | x < y = return (prog // [(outPos, 1)], i + 4)
+    | otherwise = return (prog // [(outPos, 0)], i + 4)
+  where
+    x = param (immediate a) (prog ! (i + 1)) prog
+    y = param (immediate b) (prog ! (i + 2)) prog
+    outPos = out (immediate c) (i + 3) prog
+
+-- equals
+execInstruction prog (Opcode 8 a b c) i
+    | x == y = return (prog // [(outPos, 1)], i + 4)
+    | otherwise = return (prog // [(outPos, 0)], i + 4)
+  where
+    x = param (immediate a) (prog ! (i + 1)) prog
+    y = param (immediate b) (prog ! (i + 2)) prog
+    outPos = out (immediate c) (i + 3) prog
+
 
 -- True = Immediate
 -- False = Position

@@ -1,4 +1,4 @@
-# Advent-of-Code-2019
+# Advent of Code 2019
 My solutions to Advent of Code 2019 problems.
 
 All code found in this repository is licensed under the GNU General Public License v3.0, Copyright (C) 2019 Anders Eriksson. For more information see file 'LICENSE'.
@@ -27,8 +27,12 @@ All code found in this repository is licensed under the GNU General Public Licen
 |8|||
 |7|||
 |6|||
-|5|||
+|5|⭐|⭐|
 |4|⭐|⭐|
 |3|⭐|⭐|
 |2|⭐|⭐|
 |1|⭐|⭐|
+
+## TODO
+
+- Day 2 requires massive tidy up
