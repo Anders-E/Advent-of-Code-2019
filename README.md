@@ -25,7 +25,7 @@ All code found in this repository is licensed under the GNU General Public Licen
 |10|||
 |9|||
 |8|⭐|⭐|
-|7|||
+|7|⭐||
 |6|⭐|⭐|
 |5|⭐|⭐|
 |4|⭐|⭐|
