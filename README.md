@@ -21,7 +21,7 @@ All code found in this repository is licensed under the GNU General Public Licen
 |14|||
 |13|||
 |12|⭐||
-|11|||
+|11|⭐||
 |10|⭐||
 |9|⭐|⭐|
 |8|⭐|⭐|
