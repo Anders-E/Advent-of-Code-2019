@@ -32,7 +32,3 @@ All code found in this repository is licensed under the GNU General Public Licen
 |3|⭐|⭐|
 |2|⭐|⭐|
 |1|⭐|⭐|
-
-## TODO
-
-- Day 2 requires massive tidy up
